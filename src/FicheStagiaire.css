@@ -1,0 +1,352 @@
+.student-profile-page {
+  min-height: 100vh;
+  background: #edf1f4;
+  color: #1b3d5f;
+}
+
+.student-profile-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 18px 32px;
+}
+
+.student-profile-page .page-header h1 {
+  color: #0d4d7a;
+  font-size: 1.35rem;
+}
+
+.student-profile-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 2fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.student-card,
+.student-record {
+  border: 1px solid #dfe8ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.student-card {
+  padding: 26px 20px 20px;
+}
+
+.student-avatar {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 14px;
+  border: 2px solid #1d5b86;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #1d5b86;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.student-card h2 {
+  margin: 0;
+  color: #174e78;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.student-course {
+  margin: 6px 0 16px;
+  color: #61798b;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.student-summary {
+  margin: 0;
+}
+
+.student-summary > div {
+  padding: 9px 0;
+  border-bottom: 1px solid #e8eef2;
+}
+
+.student-summary dt,
+.profile-information dt {
+  margin-bottom: 4px;
+  color: #718696;
+  font-size: 0.78rem;
+}
+
+.student-summary dd,
+.profile-information dd {
+  margin: 0;
+  color: #243f55;
+  font-size: 0.91rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.student-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.student-actions button,
+.delete-confirm-dialog button {
+  min-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-edit {
+  background: #ed8a24;
+  color: white;
+}
+
+.profile-delete {
+  background: #cf3e3e;
+  color: white;
+}
+
+.student-actions .profile-back {
+  grid-column: 1 / -1;
+  border-color: #d5dfe8;
+  background: #f7f9fa;
+  color: #31536c;
+}
+
+.student-record {
+  min-width: 0;
+  padding: 0 20px 20px;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 24px;
+  min-height: 54px;
+  border-bottom: 1px solid #dfe8ef;
+}
+
+.profile-tab {
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: #526d82;
+  cursor: pointer;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.profile-tab.active {
+  color: #0f4d7d;
+}
+
+.profile-tab.active::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: #0f4d7d;
+  content: '';
+}
+
+.profile-information {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 24px;
+  margin: 0;
+  padding: 16px 2px;
+}
+
+.profile-information > div {
+  padding: 12px 0;
+  border-bottom: 1px solid #e8eef2;
+}
+
+.attendance-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px 0;
+}
+
+.attendance-summary article {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 13px;
+  border: 1px solid #dfe8ef;
+  border-left: 4px solid #2475a6;
+  border-radius: 5px;
+  background: #fbfcfd;
+}
+
+.attendance-summary strong {
+  color: #2475a6;
+  font-size: 1.35rem;
+}
+
+.attendance-summary span {
+  color: #586f81;
+  font-size: 0.82rem;
+}
+
+.attendance-summary .attendance-good { border-left-color: #35a66b; }
+.attendance-summary .attendance-good strong { color: #278454; }
+.attendance-summary .attendance-warning { border-left-color: #ce4848; }
+.attendance-summary .attendance-warning strong { color: #bd3838; }
+
+.profile-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.profile-table th {
+  padding: 11px 9px;
+  background: #0f4d7d;
+  color: #fff;
+  font-size: 0.83rem;
+  white-space: nowrap;
+}
+
+.profile-table td {
+  padding: 11px 9px;
+  border-bottom: 1px solid #e4ebf0;
+  color: #344f64;
+  font-size: 0.86rem;
+}
+
+.record-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 14px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.record-status.justified { background: #e4f3e9; color: #278454; }
+.record-status.unjustified { background: #fbe8e8; color: #bb3d3d; }
+
+.profile-empty,
+.profile-notice {
+  padding: 24px !important;
+  text-align: center;
+  color: #647d90 !important;
+}
+
+.profile-notice {
+  margin: 0 0 14px;
+  border: 1px solid #e7c2c2;
+  border-radius: 6px;
+  background: #fff5f5;
+  text-align: left;
+}
+
+.delete-confirm-overlay {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 25, 35, 0.52);
+}
+
+.delete-confirm-dialog {
+  width: min(550px, 100%);
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+}
+
+.delete-confirm-dialog header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 20px;
+  background: #c92f2f;
+  color: white;
+}
+
+.delete-confirm-dialog header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.delete-confirm-dialog header button {
+  min-height: auto;
+  padding: 0 3px;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.delete-confirm-dialog p {
+  margin: 0;
+  padding: 24px 22px;
+  color: #435668;
+  line-height: 1.55;
+}
+
+.delete-confirm-dialog footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.delete-confirm-dialog .cancel-delete {
+  min-width: 115px;
+  border-color: #d4dfe7;
+  background: #fff;
+  color: #41576a;
+}
+
+.delete-confirm-dialog .confirm-delete {
+  min-width: 145px;
+  background: #d92e2e;
+  color: #fff;
+}
+
+@media (max-width: 850px) {
+  .student-profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .student-profile-main .page-header {
+    align-items: flex-start;
+  }
+
+  .profile-information,
+  .attendance-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .student-record {
+    padding: 0 12px 14px;
+  }
+
+  .profile-tabs {
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .profile-tab {
+    padding: 0 5px;
+    font-size: 0.84rem;
+  }
+}
